@@ -32,4 +32,4 @@ The project structure currently has 7 main elements - header, profile section
 4. [Mesto with registration and authorization](https://github.com/Nasdermn/react-mesto-auth)
 
 ## Ссылка на GitHub Pages (GitHub Pages link):
-https://nasdermn.github.io/mesto/index.html
+https://nasdermn.github.io/mesto-classic/index.html
