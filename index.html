@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dan Causelove">
+    <title>Проект "Место"</title>
+    <link rel="stylesheet" href="pages/index.css">
+  </head>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <img src="images/logo.svg" alt="Проект Место" class="header__logo">
+      </header>
+      <main class ="content">
+        <section class="profile">
+          <div class="profile__person">
+            <img src="images/jack.png" alt="Жак-Ив Кусто" class="profile__avatar">
+            <div class="profile__info">
+                <div class="profile__name-edit">
+                  <h1 class="profile__name">Жак-Ив Кусто</h1>
+                  <button class="profile__edit-button" type="button">
+                    <img src="images/pencil.png" alt="Кнопка «Изменить»" class="profile__symbol profile__symbol_pencil">
+                  </button>
+                </div>
+              <p class="profile__description">Исследователь океана</p>
+            </div>
+          </div>
+          <button class="profile__add-button" type="button">
+            <img src="images/plus.png" alt="Кнопка «Добавить»" class="profile__symbol profile__symbol_plus">
+          </button>
+        </section>
+        <section class="elements">
+          <template id="elements-template">
+            <div class="elements__element">
+              <button class="elements__remove" type="button"></button>
+              <img class="elements__picture" src="-" alt="Фото элемента">
+              <div class="elements__under-picture">
+                <h2 class="elements__text"></h2>
+                <button class="elements__like" type="button"></button>
+              </div>
+            </div>
+          </template>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">&copy; 2022 Mesto Russia</p>
+      </footer>
+      <div class="popup popup_edit-element">
+        <div class="popup__container">
+          <button class="popup__cross" type="button"></button>
+          <p class="popup__title">Редактировать профиль</p>
+          <form class="popup__form" name="editform" novalidate>
+            <input id="name-input" type="text" class="popup__input popup__input_field_name" name="popupname" placeholder="Имя" minlength="2" maxlength="40" required>
+            <span class="input-error name-input-error"></span>
+            <input id="description-input" type="text" class="popup__input popup__input_field_description" name="popupdescription" placeholder="Описание" minlength="2" maxlength="200" required>
+            <span class="input-error description-input-error"></span>
+            <button type="submit" class="popup__button">Сохранить</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_add-element">
+        <div class="popup__container">
+          <button class="popup__cross" type="button"></button>
+          <p class="popup__title">Новое место</p>
+          <form class="popup__form" name="addform" novalidate>
+            <input id="place-input" type="text" class="popup__input popup__input_field_place" name="popupplace" placeholder="Название" minlength="2" maxlength="30" required>
+            <span class="input-error place-input-error"></span>
+            <input id="link-input" type="url" class="popup__input popup__input_field_link" name="popuplink" placeholder="Ссылка на картинку" required>
+            <span class="input-error link-input-error"></span>
+            <button type="submit" class="popup__button">Создать</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_full-image">
+        <div class="popup__figure">
+          <img class="popup__image" src="" alt="Фото элемента">
+          <button class="popup__cross" type="button"></button>
+          <figcaption class="popup__figcaption"></figcaption>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
